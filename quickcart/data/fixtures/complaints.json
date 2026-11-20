@@ -1,0 +1,23 @@
+{
+  "_comment": "Team 3 starting data: u2's refund history. Three refunds fall inside the last 30 days (triggers FREQUENT_REFUNDS) and one falls outside it (checks the 30-day window). Team 3 owns changes.",
+  "tables": [
+    {
+      "table": "complaints",
+      "rows": [
+        {"complaint_id": "C-0001", "user_id": "u2", "session_id": "seed", "order_id": "O202", "type": "damaged", "items": "[\"SKU-PANEER-X-200\"]", "description": "One paneer pack arrived torn.", "status": "resolved", "decision": "{\"action\": \"AUTO_REFUND\", \"reason_code\": \"WITHIN_LIMIT\", \"amount\": \"95.00\"}", "created_at": "@now-12d+2h"},
+        {"complaint_id": "C-0002", "user_id": "u2", "session_id": "seed", "order_id": "O202", "type": "missing_item", "items": "[\"SKU-PANEER-X-200\"]", "description": "Second paneer pack missing.", "status": "resolved", "decision": "{\"action\": \"AUTO_REFUND\", \"reason_code\": \"WITHIN_LIMIT\", \"amount\": \"95.00\"}", "created_at": "@now-11d"},
+        {"complaint_id": "C-0003", "user_id": "u2", "session_id": "seed", "order_id": "O204", "type": "missing_item", "items": "[\"SKU-CURD-400\"]", "description": "Curd was not in the bag.", "status": "resolved", "decision": "{\"action\": \"AUTO_REFUND\", \"reason_code\": \"WITHIN_LIMIT\", \"amount\": \"45.00\"}", "created_at": "@now-19d"},
+        {"complaint_id": "C-0004", "user_id": "u2", "session_id": "seed", "order_id": "O205", "type": "damaged", "items": "[\"SKU-BANANA-6\"]", "description": "Bananas were crushed.", "status": "resolved", "decision": "{\"action\": \"AUTO_REFUND\", \"reason_code\": \"WITHIN_LIMIT\", \"amount\": \"48.00\"}", "created_at": "@now-44d"}
+      ]
+    },
+    {
+      "table": "refunds",
+      "rows": [
+        {"refund_id": "R-0001", "complaint_id": "C-0001", "user_id": "u2", "amount": "95.00", "issued_by": "system", "issued_at": "@now-12d+3h"},
+        {"refund_id": "R-0002", "complaint_id": "C-0002", "user_id": "u2", "amount": "95.00", "issued_by": "system", "issued_at": "@now-11d+1h"},
+        {"refund_id": "R-0003", "complaint_id": "C-0003", "user_id": "u2", "amount": "45.00", "issued_by": "system", "issued_at": "@now-19d+1h"},
+        {"refund_id": "R-0004", "complaint_id": "C-0004", "user_id": "u2", "amount": "48.00", "issued_by": "system", "issued_at": "@now-44d+1h"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "_comment": "Core seed data shared by all teams. FROZEN: changes need one reviewer per team. Times like '@now-3d+30m' are resolved by seed.py relative to the moment you seed (d = days, h = hours, m = minutes), so 'last 30 days' rules keep working whenever you run the demo.",
+  "tables": [
+    {
+      "table": "users",
+      "rows": [
+        {"user_id": "u1", "name": "Demo customer 1 (regular)"},
+        {"user_id": "u2", "name": "Demo customer 2 (frequent refunds)"},
+        {"user_id": "u3", "name": "Another customer (owns O999)"}
+      ]
+    },
+    {
+      "table": "products",
+      "rows": [
+        {"sku": "SKU-MILK-1L", "name": "Fresh Toned Milk 1L", "brand": "DairyFresh", "category": "dairy", "price": "68.00", "stock": 40, "veg": 1, "description": "Pasteurised toned milk, 1 litre pouch."},
+        {"sku": "SKU-MILK-500", "name": "Fresh Toned Milk 500ml", "brand": "DairyFresh", "category": "dairy", "price": "36.00", "stock": 25, "veg": 1, "description": "Pasteurised toned milk, 500 ml pouch."},
+        {"sku": "SKU-PANEER-X-200", "name": "Brand X Paneer 200g", "brand": "Brand X", "category": "dairy", "price": "95.00", "stock": 18, "veg": 1, "description": "Soft cottage cheese block, 200 g."},
+        {"sku": "SKU-PANEER-Y-200", "name": "Brand Y Paneer 200g", "brand": "Brand Y", "category": "dairy", "price": "110.00", "stock": 10, "veg": 1, "description": "Malai paneer, 200 g."},
+        {"sku": "SKU-CURD-400", "name": "Thick Curd 400g", "brand": "DairyFresh", "category": "dairy", "price": "45.00", "stock": 30, "veg": 1, "description": "Set curd, 400 g cup."},
+        {"sku": "SKU-GHEE-1L", "name": "Premium Cow Ghee 1L", "brand": "GoldenSpoon", "category": "dairy", "price": "650.00", "stock": 8, "veg": 1, "description": "Clarified butter in a 1 litre jar."},
+        {"sku": "SKU-EGGS-6", "name": "Farm Eggs (6)", "brand": "HappyHen", "category": "eggs", "price": "90.00", "stock": 50, "veg": 0, "description": "Six brown eggs."},
+        {"sku": "SKU-EGGS-12", "name": "Farm Eggs (12)", "brand": "HappyHen", "category": "eggs", "price": "170.00", "stock": 20, "veg": 0, "description": "Twelve brown eggs."},
+        {"sku": "SKU-BREAD-WW", "name": "Whole Wheat Bread 400g", "brand": "OvenFresh", "category": "bakery", "price": "45.00", "stock": 22, "veg": 1, "description": "Sliced whole wheat loaf."},
+        {"sku": "SKU-COOKIE-PB", "name": "Peanut Butter Cookies 150g", "brand": "CrunchCo", "category": "bakery", "price": "60.00", "stock": 15, "veg": 1, "description": "Crunchy cookies made with peanut butter."},
+        {"sku": "SKU-COOKIE-OAT", "name": "Oat Cookies 150g", "brand": "CrunchCo", "category": "bakery", "price": "55.00", "stock": 12, "veg": 1, "description": "Oat and jaggery cookies."},
+        {"sku": "SKU-BAR-NUTTY", "name": "Nutty Granola Bar", "brand": "TrailMix Co", "category": "snack_bars", "price": "40.00", "stock": 0, "veg": 1, "description": "Granola bar with roasted peanuts. Currently out of stock."},
+        {"sku": "SKU-BAR-PB", "name": "Peanut Butter Protein Bar", "brand": "FitBite", "category": "snack_bars", "price": "42.00", "stock": 20, "veg": 1, "description": "Protein bar with peanut butter."},
+        {"sku": "SKU-BAR-OAT", "name": "Oat & Honey Bar", "brand": "TrailMix Co", "category": "snack_bars", "price": "38.00", "stock": 25, "veg": 1, "description": "Rolled oats with honey."},
+        {"sku": "SKU-BAR-ALMOND", "name": "Almond Crunch Bar", "brand": "FitBite", "category": "snack_bars", "price": "50.00", "stock": 14, "veg": 1, "description": "Almonds and puffed rice."},
+        {"sku": "SKU-BAR-SEED", "name": "Seeds & Dates Bar", "brand": "GreenBite", "category": "snack_bars", "price": "45.00", "stock": 9, "veg": 1, "description": "Sesame, pumpkin seeds and dates."},
+        {"sku": "SKU-RICE-5KG", "name": "Basmati Rice 5kg", "brand": "RoyalGrain", "category": "staples", "price": "520.00", "stock": 10, "veg": 1, "description": "Aged long-grain basmati rice."},
+        {"sku": "SKU-ATTA-5KG", "name": "Whole Wheat Atta 5kg", "brand": "RoyalGrain", "category": "staples", "price": "285.00", "stock": 12, "veg": 1, "description": "Stone-ground whole wheat flour."},
+        {"sku": "SKU-BANANA-6", "name": "Bananas (6)", "brand": "FarmBasket", "category": "fruits_veg", "price": "48.00", "stock": 30, "veg": 1, "description": "Six ripe bananas."},
+        {"sku": "SKU-TOMATO-1KG", "name": "Tomatoes 1kg", "brand": "FarmBasket", "category": "fruits_veg", "price": "40.00", "stock": 0, "veg": 1, "description": "Fresh tomatoes. Currently out of stock."},
+        {"sku": "SKU-JUICE-OJ", "name": "Orange Juice 1L", "brand": "SunSip", "category": "beverages", "price": "120.00", "stock": 16, "veg": 1, "description": "Not-from-concentrate orange juice."}
+      ]
+    },
+    {
+      "table": "product_ingredients",
+      "rows": [
+        {"sku": "SKU-MILK-1L", "ingredient": "milk"},
+        {"sku": "SKU-MILK-500", "ingredient": "milk"},
+        {"sku": "SKU-PANEER-X-200", "ingredient": "milk"},
+        {"sku": "SKU-PANEER-Y-200", "ingredient": "milk"},
+        {"sku": "SKU-CURD-400", "ingredient": "milk"},
+        {"sku": "SKU-GHEE-1L", "ingredient": "milk fat"},
+        {"sku": "SKU-EGGS-6", "ingredient": "egg"},
+        {"sku": "SKU-EGGS-12", "ingredient": "egg"},
+        {"sku": "SKU-BREAD-WW", "ingredient": "whole wheat flour"},
+        {"sku": "SKU-BREAD-WW", "ingredient": "yeast"},
+        {"sku": "SKU-COOKIE-PB", "ingredient": "wheat flour"},
+        {"sku": "SKU-COOKIE-PB", "ingredient": "peanut butter"},
+        {"sku": "SKU-COOKIE-OAT", "ingredient": "oats"},
+        {"sku": "SKU-COOKIE-OAT", "ingredient": "wheat flour"},
+        {"sku": "SKU-COOKIE-OAT", "ingredient": "jaggery"},
+        {"sku": "SKU-BAR-NUTTY", "ingredient": "oats"},
+        {"sku": "SKU-BAR-NUTTY", "ingredient": "roasted peanuts"},
+        {"sku": "SKU-BAR-PB", "ingredient": "peanut butter"},
+        {"sku": "SKU-BAR-PB", "ingredient": "whey protein"},
+        {"sku": "SKU-BAR-OAT", "ingredient": "oats"},
+        {"sku": "SKU-BAR-OAT", "ingredient": "honey"},
+        {"sku": "SKU-BAR-ALMOND", "ingredient": "almonds"},
+        {"sku": "SKU-BAR-ALMOND", "ingredient": "puffed rice"},
+        {"sku": "SKU-BAR-SEED", "ingredient": "sesame"},
+        {"sku": "SKU-BAR-SEED", "ingredient": "pumpkin seeds"},
+        {"sku": "SKU-BAR-SEED", "ingredient": "dates"},
+        {"sku": "SKU-ATTA-5KG", "ingredient": "whole wheat"}
+      ]
+    },
+    {
+      "table": "product_allergens",
+      "rows": [
+        {"sku": "SKU-MILK-1L", "allergen": "milk"},
+        {"sku": "SKU-MILK-500", "allergen": "milk"},
+        {"sku": "SKU-PANEER-X-200", "allergen": "milk"},
+        {"sku": "SKU-PANEER-Y-200", "allergen": "milk"},
+        {"sku": "SKU-CURD-400", "allergen": "milk"},
+        {"sku": "SKU-GHEE-1L", "allergen": "milk"},
+        {"sku": "SKU-EGGS-6", "allergen": "egg"},
+        {"sku": "SKU-EGGS-12", "allergen": "egg"},
+        {"sku": "SKU-BREAD-WW", "allergen": "wheat"},
+        {"sku": "SKU-COOKIE-PB", "allergen": "wheat"},
+        {"sku": "SKU-COOKIE-PB", "allergen": "peanut"},
+        {"sku": "SKU-COOKIE-OAT", "allergen": "wheat"},
+        {"sku": "SKU-BAR-NUTTY", "allergen": "peanut"},
+        {"sku": "SKU-BAR-PB", "allergen": "peanut"},
+        {"sku": "SKU-BAR-PB", "allergen": "milk"},
+        {"sku": "SKU-BAR-ALMOND", "allergen": "tree_nut"},
+        {"sku": "SKU-BAR-SEED", "allergen": "sesame"},
+        {"sku": "SKU-ATTA-5KG", "allergen": "wheat"}
+      ]
+    },
+    {
+      "table": "substitutes",
+      "rows": [
+        {"sku": "SKU-BAR-NUTTY", "substitute_sku": "SKU-BAR-PB"},
+        {"sku": "SKU-BAR-NUTTY", "substitute_sku": "SKU-BAR-OAT"},
+        {"sku": "SKU-BAR-NUTTY", "substitute_sku": "SKU-BAR-ALMOND"}
+      ]
+    },
+    {
+      "table": "orders",
+      "rows": [
+        {"order_id": "O101", "user_id": "u1", "status": "delivered", "placed_at": "@now-3d", "promised_eta": "@now-3d+30m", "delivered_at": "@now-3d+55m", "total": "113.00"},
+        {"order_id": "O102", "user_id": "u1", "status": "delivered", "placed_at": "@now-1d", "promised_eta": "@now-1d+30m", "delivered_at": "@now-1d+28m", "total": "271.00"},
+        {"order_id": "O103", "user_id": "u1", "status": "out_for_delivery", "placed_at": "@now-20m", "promised_eta": "@now+10m", "delivered_at": null, "total": "168.00"},
+        {"order_id": "O104", "user_id": "u1", "status": "delivered", "placed_at": "@now-10d", "promised_eta": "@now-10d+30m", "delivered_at": "@now-10d+30m", "total": "935.00"},
+        {"order_id": "O201", "user_id": "u2", "status": "delivered", "placed_at": "@now-2d", "promised_eta": "@now-2d+30m", "delivered_at": "@now-2d+35m", "total": "135.00"},
+        {"order_id": "O202", "user_id": "u2", "status": "delivered", "placed_at": "@now-12d", "promised_eta": "@now-12d+30m", "delivered_at": "@now-12d+30m", "total": "190.00"},
+        {"order_id": "O203", "user_id": "u2", "status": "cancelled", "placed_at": "@now-6d", "promised_eta": "@now-6d+30m", "delivered_at": null, "total": "120.00"},
+        {"order_id": "O204", "user_id": "u2", "status": "delivered", "placed_at": "@now-20d", "promised_eta": "@now-20d+30m", "delivered_at": "@now-20d+25m", "total": "113.00"},
+        {"order_id": "O205", "user_id": "u2", "status": "delivered", "placed_at": "@now-45d", "promised_eta": "@now-45d+30m", "delivered_at": "@now-45d+30m", "total": "48.00"},
+        {"order_id": "O999", "user_id": "u3", "status": "delivered", "placed_at": "@now-4d", "promised_eta": "@now-4d+30m", "delivered_at": "@now-4d+20m", "total": "520.00"}
+      ]
+    },
+    {
+      "table": "order_items",
+      "rows": [
+        {"order_id": "O101", "sku": "SKU-MILK-1L", "qty": 1, "unit_price": "68.00"},
+        {"order_id": "O101", "sku": "SKU-BREAD-WW", "qty": 1, "unit_price": "45.00"},
+        {"order_id": "O102", "sku": "SKU-EGGS-6", "qty": 1, "unit_price": "90.00"},
+        {"order_id": "O102", "sku": "SKU-CURD-400", "qty": 1, "unit_price": "45.00"},
+        {"order_id": "O102", "sku": "SKU-MILK-1L", "qty": 2, "unit_price": "68.00"},
+        {"order_id": "O103", "sku": "SKU-BANANA-6", "qty": 1, "unit_price": "48.00"},
+        {"order_id": "O103", "sku": "SKU-JUICE-OJ", "qty": 1, "unit_price": "120.00"},
+        {"order_id": "O104", "sku": "SKU-GHEE-1L", "qty": 1, "unit_price": "650.00"},
+        {"order_id": "O104", "sku": "SKU-ATTA-5KG", "qty": 1, "unit_price": "285.00"},
+        {"order_id": "O201", "sku": "SKU-EGGS-6", "qty": 1, "unit_price": "90.00"},
+        {"order_id": "O201", "sku": "SKU-BREAD-WW", "qty": 1, "unit_price": "45.00"},
+        {"order_id": "O202", "sku": "SKU-PANEER-X-200", "qty": 2, "unit_price": "95.00"},
+        {"order_id": "O203", "sku": "SKU-JUICE-OJ", "qty": 1, "unit_price": "120.00"},
+        {"order_id": "O204", "sku": "SKU-CURD-400", "qty": 1, "unit_price": "45.00"},
+        {"order_id": "O204", "sku": "SKU-MILK-1L", "qty": 1, "unit_price": "68.00"},
+        {"order_id": "O205", "sku": "SKU-BANANA-6", "qty": 1, "unit_price": "48.00"},
+        {"order_id": "O999", "sku": "SKU-RICE-5KG", "qty": 1, "unit_price": "520.00"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Lab stack only. Do not add packages without the whole group agreeing (new packages need approval).
+python-dotenv          # loads .env (used by the lab llm_kit)
+pytest                 # tests (Lab 1D)
+chromadb==1.5.9        # Team 2: vector store (Lab 2D)
+# fastmcp==4.1.1       # Team 3 stretch goal only (Lab 2C)
+#
+# Platform calls use Python's built-in urllib: no HTTP package is needed.

@@ -1,0 +1,11 @@
+# Secrets: never commit
+.env
+
+# Local data, databases, recordings, vector store
+var/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
